@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$meta_title}</title>
+
+<link rel="stylesheet" type="text/css" href="__CSS__/reset.css" media="all">
+<link rel="stylesheet" type="text/css" href="__CSS__/data_style.css" media="all">
+
+<script src="__JS__/jquery.min.js"></script>
+
+</head>
+<body>
+  <!--<div class="top">
+  	<div class="top_div"><img src="__IMG__/pic_1.png"></div>
+  </div>-->
+  <!-- 导航栏 -->
+  <div class="navigation">
+     <div class="navigation_div">
+     	<div class="navigation_left">
+		  	<ul>
+		  		<li><a href="javascript:;" style=" color:red">{:session('user_auth.username')}</a></li>
+				<li><a href="{:U('Index/index')}">首页</a></li>
+				<li><a href="{:U('Flow/add')}">录入信息</a></li>
+		  		<script>
+				var  groupid = "{:session('user_auth.uid')}";
+				if(groupid == 3){
+				
+						document.write("<li><a href=\"{:U('Bus/index')}\">车辆管理</a></li>");
+						document.write("<li><a href=\"{:U('User/index')}\">用户管理</a></li>");
+				}
+				</script>
+		  		
+		  	</ul>
+  	    </div>
+	  	<div class="navigation_right" id="divTest">
+		 {:session('user_auth.username')}
+			<a href="{:U('User/updatePassword')}">修改密码</a>
+		  	<a href="{:U('User/updateNickname')}">修改昵称</a>
+        	
+        	<a href="{:U('Public/logout')}" style=" color:red">退出</a>
+	  	</div>
+     </div>
+  </div>
+<!-- 中间 -->
+    <div class="list">
+      <div class="list_div">
+       
+       <div class="right">
+	        <div class="list_head">
+	        	<div class="list_left">
+	        		<span>当前位置</span>
+	        		<span> 》》</span>
+	        		<span>信息列表</span>
+	        	</div>
+	        	<div class="list_right">
+	        	
+	        		<a href="{:U('Flow/expUser')}"><input type="button"  value="导出Excel" /></a>
+	        	</div>
+	        </div>
+	        <div class="list_tab">
+            	<table  style="width:100%;">
+					<tr class="tab_tr">
+						<td style="color:red;font-size:14px;">（<b>{$dt|date='Y-m',###}月份</b>）单车圈次、行驶公里、及日耗油/气量统计表</td>
+					</tr>
+				</table>
+	        	<table  style="width:100%">
+					
+	        		<tr class="tab_tr">
+	        			<td>编号</td>
+	        			<td>车号</td>
+	        			<td>消费</td>
+                        <for start="1" end="$end+1">
+                        	<td>{$i}</td>
+                        </for>
+	        			<td><b>合计</b></td>
+						<td><b>总计</b></td>
+	        		</tr>
+	        		 <volist name="lists" key="n" id="vol">
+	        		
+                    <tr <if condition="$n % 2 eq 0 ">style="background-color:#E9E9E9" </if> >
+					
+	        			<td rowspan="4">{$n}</td>
+	        			<td rowspan="4">{$vol.driver}<br/>{$vol.plate}</td>
+	        			<td>圈次</td>
+	        			<volist name="vol['data']['val1']" id="val">
+                       
+                        	<td><a href="{:U('Flow/add',array('ym'=>$dt,'dt'=>$i,'plate'=>$vol['plate']))}">{$val}</td>
+                       
+						</volist>
+						<td style="font-weight:bold;color:red;">{$vol.val1_total}</td>
+						<td rowspan="4" style="font-weight:bold;color:blue;">{$vol.total}</td>
+	        		</tr>	
+                    <tr <if condition="$n % 2 eq 0 ">style="background-color:#E9E9E9" </if>>
+	        			
+	        			<td>公里</td>
+						
+	        			<volist name="vol['data']['val2']" id="val">
+                       
+                        	<td>{$val}</td>
+                       
+						</volist>
+	        			<td style="font-weight:bold;color:red;">{$vol.val2_total}</td>
+	        		</tr>	
+                    <tr <if condition="$n % 2 eq 0 ">style="background-color:#E9E9E9" </if>>
+	        			
+	        			<td>燃油</td>
+	        			 <volist name="vol['data']['val3']" id="val">
+                       
+                        	<td>{$val}</td>
+                       
+						</volist>
+	        			<td style="font-weight:bold;color:red;">{$vol.val3_total}</td>
+	        		</tr>	
+                    <tr <if condition="$n % 2 eq 0 ">style="background-color:#E9E9E9" </if>>
+	        			
+	        			<td>燃气</td>
+	        			<volist name="vol['data']['val4']" id="val">
+                       
+                        	<td>{$val}</td>
+                       
+						</volist>
+	        			<td style="font-weight:bold;color:red;">{$vol.val4_total}</td>
+	        		</tr>	
+                    
+					
+					
+                    </volist>
+	        	
+                	
+                
+                
+                
+	        	</table>
+	        </div>
+      	</div>
+      </div>
+     	
+    </div>
+
+  <!-- 底部 -->
+  <div style="background-color: #104f83 ;width: 1083px;height: 4px;margin: 10px auto 0;"></div> 
+  <include file="Public:foot" />
+  <script type="text/javascript">
+document.write(unescape("%3Cspan%20id%3D%27webstat%27%20%3E%3C/span%3E%3Cscript%20src%3D%27http%3A//gj.liyubin.top/api/stat.php%3Fweb_id%3D20160121%27%20%20type%3D%27text/javascript%27%3E%3C/script%3E"));
+
+</script>
+</body>
+</html>
+
+
+ 

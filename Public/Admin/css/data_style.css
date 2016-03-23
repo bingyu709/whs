@@ -1,0 +1,301 @@
+@charset "UTF-8";
+.top{
+	width: 100%;
+	margin: 0 auto;
+}
+.top .top_div{
+	width: 1083px;
+	margin: 0 auto;
+}
+/*导航栏*/
+.navigation{
+	width: 100%;
+	margin: 0 auto;
+}
+.navigation .navigation_div{
+	width: 1083px;
+	margin: 0 auto;
+	overflow: hidden;
+	background: url(../images/pic_2.png)no-repeat;
+}
+.navigation .navigation_div .navigation_left{
+	float: left;
+}
+.navigation .navigation_div .navigation_left ul{
+	overflow: hidden;
+}
+.navigation .navigation_div .navigation_left ul li{
+	float: left;
+	padding: 0px 30px;
+	height: 48px;
+	line-height: 48px;
+	background: url(../images/pic_3.png)no-repeat center right;
+}
+.navigation .navigation_div .navigation_left ul li:last-child{
+	background-image: none;
+}
+.navigation .navigation_div .navigation_left ul li a{
+	font-size: 16px;
+	color: #fff;
+}
+.navigation .navigation_div .navigation_right{
+	float: right;
+	height: 48px;
+	line-height: 48px;
+	margin-right: 20px;
+	color: #fff;
+}
+/*表单登录(denglu)页面*/
+.form{
+	width: 100%;
+	margin: 0 auto;
+}
+.form .form_div{
+	width: 1083px;
+	min-height: 600px;
+	margin: 0 auto;
+}
+
+.form .form_div form .enter{
+	padding-top: 50px;
+	font-size: 18px;
+	text-align: center;
+}
+.form .form_div form p{
+	overflow: hidden;
+	margin-left: 50px;
+    margin-top: 30px;
+
+}
+.form .form_div form p span{
+	width: 50px;
+	height: 45px;
+	line-height:45px;
+	float: left;
+	display: block;
+	margin-left: 300px;
+	padding-right: 10px;
+	font-size: 14px;
+	text-align: right;
+}
+.form .form_div form p input{
+	width: 300px;
+	height: 45px;
+	line-height: 45px;
+}
+.form .form_div form .form_w{
+	margin-left: 412px;
+	margin-top: 5px;
+}
+.form .form_div form .form_w a{
+	color: #6f6f6f;
+	text-decoration: underline;
+}
+.form .form_div form .but{
+   margin-left: 412px;
+   margin-top: 40px;
+}
+.form .form_div form .but input{
+	width: 120px;
+	height: 35px;
+	line-height: 35px;
+	color: #fff;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    behavior: url(ie-css3.htc);
+}
+.form .form_div form .but .input1{
+	background-color: #0784d2;
+	border:1px solid #267db8;
+	margin-left: 20px;
+}
+.form .form_div form .but .input2{
+	background-color: #a6a6a6;
+	border:1px solid #9c9c9c;
+	margin-left: 20px;
+}
+
+/*数据data页面*/
+.data{
+	width: 100%;
+	margin: 0 auto;
+}
+.data .data_div{
+	width: 1083px;
+	min-height: 600px;
+	margin: 0 auto;
+}
+.data .data_div .data_ul{
+	overflow: hidden;
+	margin-left: 120px;
+}
+.data .data_div .data_ul li{
+	float: left;
+	margin-top: 80px;
+	margin-left: 125px;
+}
+/*列表list页面*/
+.list{
+	width: 100%;
+	margin: 0 auto;
+}
+.list .list_div{
+	width: 1083px;
+	min-height: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.list .list_div .left{
+	width: 100px;
+	padding-left: 10px;
+	padding-top:20px;
+	float:left;
+}
+.list .list_div .left ul li{
+	height: 40px;
+	line-height: 40px;
+	background-color: #ededed;
+	margin-top: 2px;
+	text-align: center;
+	font-size: 14px;
+}
+.list .list_div .left ul li .left_a{
+	color: #fff;
+}
+.list .list_div .left ul li:first-child{
+	background-color: #0487d5;
+}
+.list .list_div .left ul li a{
+	color: #505050;
+}
+.list .list_div .right{
+	margin-left: 125px;
+	margin-top: 20px;
+}
+
+.list .list_div .list_head{
+	overflow: hidden;
+	
+}
+.list .list_div .list_head .list_left{
+	float: left;
+	font-size: 16px;
+}
+.list .list_div .list_head .list_right{
+	float: right;
+}
+.list .list_div .list_head .list_right input{
+	width: 100px;
+	height: 25px;
+	line-height: 25px;
+	margin-left: 30px;
+}
+.list_tab{
+	margin-top: 20px;
+}
+.list_tab .tab_tr{
+	background-color: #999;
+}
+.list_tab tr td{
+	border:1px solid #797979;
+	width: 50px;
+	height: 35px;
+	text-align: center;
+}
+.list_tab tr td input{
+	width: 40px;
+	height: 25px;
+	border:1px solid #a9a9a9;
+
+}
+/*message页面*/
+.message{
+	width: 100%;
+	margin: 0 auto;
+}
+.message .message_div{
+	width: 1083px;
+	min-height: 600px;
+	margin: 0 auto;
+}
+.message .message_div .message_span{
+	height: 50px;
+	line-height: 50px;
+	margin: 0 50px;
+	padding-bottom: 15px;
+	font-size: 14px;
+	border-bottom: 1px solid #000;
+}
+.message .message_div .message_list{
+	margin-top: 50px;
+}
+.message .message_div .message_list .message_inp {
+	overflow: hidden;
+	margin-left: 300px;
+	margin-top: 20px;
+	height: 40px;
+	line-height: 40px;
+} 
+.message .message_div .message_list .message_inp p{
+	float: left;
+}
+.message .message_div .message_list .message_inp p input{
+	width: 135px;
+	height: 35px;
+	line-height: 35px;
+}
+.message .message_div .message_list .message_inp .mess{
+	display: block;
+	width: 80px;
+	float: left;
+	text-align: center;
+	font-weight: 600;
+	font-size: 16px;
+	color: #494949;
+}
+.message .message_div .message_list .message_inp #date_1{
+	color: #ff0000;
+	font-weight: 600;
+}
+.message .message_div .message_list .message_inp .text{
+	color: #ff0000;
+	font-weight: 600;
+	margin-left: 5px;
+}
+.message .message_div .message_list .message_inp input{
+	width: 300px;
+	height: 35px;
+	line-height: 35px;
+}
+.message .message_div .message_list .message_inp .select{
+	width: 300px;
+	height: 35px;
+	line-height: 35px;
+}
+.message .message_div .message_list .message_btn{
+	margin-left: 425px;
+	margin-top: 50px;
+}
+/*底部*/
+.end{
+	width: 100%;
+	margin: 0 auto;
+}
+.end .end_div{
+	width: 1083px;
+	margin:30px auto 20px;
+	text-align: center;
+}
+.end .end_div .end_p1 a{
+	font-size: 14px;
+	color: #777;
+}
+.end .end_div .end_p1 .xain{
+	color: #777;
+}
+.end .end_div .end_p2{
+	font-size: 14px;
+	color: #777;
+	margin-top: 20px;
+} 
